@@ -1,0 +1,107 @@
+:root{
+  --pale-blue: hsl(243, 100%, 93%);
+  --grayish-blue: hsl(229, 7%, 55%);
+  --dark-blue: hsl(228, 56%, 26%);
+  --very-dark-blue: hsl(229, 57%, 11%);
+  --gradient:;
+}
+html{
+  font-family: 'Raleway', sans-serif;
+}
+
+/* -------------------- ESTILOS PROPIOS -------------------- */
+body{
+  background-image: url(../images/bg-mobile.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 68rem){
+  body{
+    background-image: url(../images/bg-desktop.png);
+  }
+}
+
+/* -------------------- MAIN CONTENT -------------------- */
+/* -------------------- SECTION -------------------- */
+.section{
+  background-color: var(--dark-blue);
+  border-radius: 10px;
+}
+.section:first-child{
+  border-radius: 10px 100px 10px 10px;
+}
+.header > img{
+  max-width: 60%;
+}
+.icon{
+  background-color: var(--very-dark-blue);
+  justify-content: center;
+  align-items: center;
+  padding: .7rem;
+  border-radius: 10px;
+}
+.icon > img{
+  width: 20px;
+}
+.progress{
+  position: relative;
+}
+.progress > progress{
+  height: 1rem;
+  border-radius: 10px;
+}
+.progress > progress::-webkit-progress-bar{
+  background-color: var(--very-dark-blue);
+  border-radius: 10px;
+}
+.progress > progress::-webkit-progress-value{
+  background-image: linear-gradient(90deg,hsl(6, 100%, 80%),hsl(335, 100%, 65%));
+  border-radius: 10px;
+}
+.progress-label{
+  justify-content: space-between;
+  font-size: .8rem;
+}
+.remaining{
+  position: absolute;
+  top: 3rem;
+  right: 0;
+  left: 0;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+@media screen and (min-width: 68rem){
+  .sections{
+    display: flex;
+    justify-content: space-between;
+  }
+  .main-content{
+    width: 60%;
+  }
+  .section{
+    flex-basis: calc(50% - 1rem);
+    height: 9rem;
+  }
+  .remaining{
+    top: -6rem;
+    left: 8rem;
+    border-radius: 10px 10px 0 10px;
+  }
+  .section:nth-child(2){
+    height: 5rem;
+  }
+}
+
+/* -------------------- ATTRIBUTION -------------------- */
+.attribution{
+  position: absolute;
+  bottom: 0;
+  background-color: var(--very-dark-blue);
+}
+.attribution > a{
+  color: gray;
+}
